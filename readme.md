@@ -10,6 +10,13 @@ This could be an alternative to [official Figma daemon][DAEMON] which serves all
 
 Usage
 --
+
+python:
+```sh
+python serve.py fonts/
+```
+
+node.js:
 ```sh
 node serve.js fonts/
 ```
