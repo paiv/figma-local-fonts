@@ -125,7 +125,7 @@ function startServer(line) {
 var fonts = null;
 var httpServer = null;
 
-function scanfontsjs(root = '.') {
+function scanfontsjs(roots) {
     // scanfonts.js
     const fs = require('fs')
     const path = require('path')
@@ -237,8 +237,8 @@ function scanfontsjs(root = '.') {
         }
     }
 
-    function* glob(root, rx) {
-        let fringe = [root]
+    function* glob(roots, rx) {
+        let fringe = [...roots]
         while (fringe.length) {
             let dir = fringe.pop()
             let subdirs;
@@ -258,8 +258,8 @@ function scanfontsjs(root = '.') {
         }
     }
 
-    function* enumerate_fonts(root) {
-        for (let fn of glob(root, /\.(?:ttf|ttc|otf|otc)$/i)) {
+    function* enumerate_fonts(roots) {
+        for (let fn of glob(roots, /\.(?:ttf|ttc|otf|otc)$/i)) {
             let spec;
             try {
                 spec = parse_font_file(fn)
@@ -270,14 +270,14 @@ function scanfontsjs(root = '.') {
         }
     }
 
-    return Object.fromEntries(enumerate_fonts(root))
+    return Object.fromEntries(enumerate_fonts(roots))
 }
 
 var process = require('process');
-let root = '.'
-if (process.argv.length > 2) {
-    root = process.argv[2]
+let roots = process.argv.slice(2)
+if (!roots.length) {
+    roots = ['.']
 }
-fonts = scanfontsjs(root)
+fonts = scanfontsjs(roots)
 
 startServer()
