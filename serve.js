@@ -3,7 +3,6 @@ var fs = require('fs');
 var url = require('url');
 var http = require('http');
 var querystring = require('querystring');
-var child_process = require('child_process');
 
 var VERSION = 17;
 
