@@ -11,12 +11,14 @@ This could be an alternative to [official Figma daemon][DAEMON] which serves all
 Usage
 --
 
-python:
+### Python
 ```sh
 python serve.py fonts/
 ```
 
-node.js:
+For WOFF2 support install `brotli` package.
+
+### Node.js
 ```sh
 node serve.js fonts/
 ```
