@@ -1,6 +1,8 @@
 Figma local fonts service
 ==
 
+[![standwithukraine](https://user-images.githubusercontent.com/196601/157241136-3f8d9ddf-ec27-44c2-b958-7002a4e1b334.svg)](https://ukrainewar.carrd.co/)
+
 Serves font files from a local directory to Figma web page.
 
 This could be an alternative to [official Figma daemon][DAEMON] which serves all fonts in the system.
