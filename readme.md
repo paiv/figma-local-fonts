@@ -1,7 +1,7 @@
 Figma local fonts service
 ==
 
-[![standwithukraine](https://user-images.githubusercontent.com/196601/157241136-3f8d9ddf-ec27-44c2-b958-7002a4e1b334.svg)](https://ukrainewar.carrd.co/)
+[![standwithukraine](https://user-images.githubusercontent.com/196601/157243734-2b254bef-f693-4669-9e8e-5a2c8d4e0834.svg)](https://ukrainewar.carrd.co/)
 
 Serves font files from a local directory to Figma web page.
 
