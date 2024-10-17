@@ -119,7 +119,7 @@ function startServer(line) {
   // HTTP for browsers that support 127.0.0.1 without triggering the mixed
   // content blocker.
   httpServer = http.createServer(handleRequest);
-  initServer(httpServer, 18412);
+  initServer(httpServer, 44950);
 }
 
 var fonts = null;

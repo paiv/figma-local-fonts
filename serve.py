@@ -12,7 +12,7 @@ from urllib.parse import urlsplit, parse_qs
 
 
 VERSION = 17
-BIND_PORT = 18412
+BIND_PORT = 44950
 FONTS = None
 
 
